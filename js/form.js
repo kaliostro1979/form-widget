@@ -50,7 +50,7 @@ function callForm({
             createModal();
             $('.selected-name').val(fullName);
             $('.selected-date').val(selectedDate);
-            $('.selected-message').val(textMessage);
+            $('.selected-message p').text(textMessage);
         }
     });
 
@@ -59,12 +59,12 @@ function callForm({
             '<div class="modal-cover"></div>'+
             '<div class="form-modal">' +
             '<form action=' + `${action}` + '>' +
-            '<label for="modal-selected-name">Selected Name</label>'+
+            '<label for="modal-selected-name">Selected Name:</label>'+
             '<input id="modal-selected-name" class="selected-name" disabled>' +
-            '<label for="modal-selected-date">Selected Date</label>'+
+            '<label for="modal-selected-date">Selected Date:</label>'+
             '<input id="modal-selected-date" class="selected-date" disabled>' +
-            '<label for="modal-selected-msg">Message</label>'+
-            '<textarea id="modal-selected-msg" class="selected-message" disabled></textarea>' +
+            '<label for="modal-selected-msg">Message:</label>'+
+            '<div id="modal-selected-msg" class="selected-message" rows="10" disabled><p></p></div>' +
             '<button type="submit" class="modal-submit-btn">Submit</button>' +
             '</form>' +
             '</div>'

@@ -4,6 +4,10 @@
     padding: 0;
 }
 
+body{
+    font-family: Arial;
+}
+
 
 .form-block {
     width: 100%;
@@ -27,6 +31,7 @@
     margin-bottom: 20px;
     min-width: 100%;
     max-width: 100%;
+    padding: 20px;
 }
 
 .text-msg:focus, .date-select:focus, #cont_name:focus{
@@ -43,7 +48,7 @@
     width: 33.3%;
     position: fixed;
     left: 33%;
-    top: 33%;
+    top: 25%;
     z-index: 1;
     border: 1px solid red;
     padding: 15px;
@@ -52,15 +57,28 @@
     box-shadow: 4px 5px 15px #bbbbbb;
 }
 
+.form-modal label{
+    font-weight: bold;
+    padding-bottom: 5px;
+    display: block;
+}
+
 .form-modal input, .form-modal textarea{
     border: none;
     background-color: transparent;
+    display: table-cell;
+    width: 100%;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+.selected-message{
+    margin-bottom: 20px;
 }
 
 .form-modal form{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    display: table;
+    width: 100%;
 }
 
 .modal-cover{

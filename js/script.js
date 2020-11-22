@@ -1,6 +1,6 @@
 callForm({
     url: 'https://reqres.in/api/users?page=1',
-    action: './form-submitted.html'
+    action: ''
 });
 
 /*DataPicker Init*/
