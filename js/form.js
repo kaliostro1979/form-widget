@@ -44,9 +44,14 @@ function callForm({
         let fullName = $('#cont_name').val();
         let selectedDate = $('.date-select').val();
         let textMessage = $('.text-msg').val();
-        if(fullName == null || selectedDate == ''){
-
-        }else{
+        if (fullName == null || selectedDate == '') {
+            if(fullName == null){
+                $('#cont_name').addClass('field-error')
+            }
+            if (selectedDate == ''){
+                $('.date-select').addClass('field-error')
+            }
+        } else {
             createModal();
             $('.selected-name').val(fullName);
             $('.selected-date').val(selectedDate);
@@ -54,16 +59,29 @@ function callForm({
         }
     });
 
+    $('#cont_name').on('change', function () {
+       if($(this).val()!=null){
+           $('#cont_name').removeClass('field-error')
+       }
+    });
+
+    $('.date-select').on('change', function () {
+        if($(this).val()!=null){
+            $('.date-select').removeClass('field-error')
+        }
+    });
+
+
     function createModal() {
         $('body').append(
-            '<div class="modal-cover"></div>'+
+            '<div class="modal-cover"></div>' +
             '<div class="form-modal">' +
             '<form action=' + `${action}` + '>' +
-            '<label for="modal-selected-name">Selected Name:</label>'+
+            '<label for="modal-selected-name">Selected Name:</label>' +
             '<input id="modal-selected-name" class="selected-name" disabled>' +
-            '<label for="modal-selected-date">Selected Date:</label>'+
+            '<label for="modal-selected-date">Selected Date:</label>' +
             '<input id="modal-selected-date" class="selected-date" disabled>' +
-            '<label for="modal-selected-msg">Message:</label>'+
+            '<label for="modal-selected-msg">Message:</label>' +
             '<div id="modal-selected-msg" class="selected-message" rows="10" disabled><p></p></div>' +
             '<button type="submit" class="modal-submit-btn">Submit</button>' +
             '</form>' +
@@ -71,12 +89,12 @@ function callForm({
         );
         $('.modal-cover').on('click', function (event) {
             event.stopPropagation();
-            if ($(event.target).has('modal-cover')){
+            if ($(event.target).has('modal-cover')) {
                 $('.form-modal').remove();
                 $('.modal-cover').remove();
-            }else{
+            } else {
 
             }
         })
     }
-    }
+}

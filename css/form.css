@@ -4,7 +4,7 @@
     padding: 0;
 }
 
-body{
+body {
     font-family: Arial;
 }
 
@@ -34,17 +34,17 @@ body{
     padding: 20px;
 }
 
-.text-msg:focus, .date-select:focus, #cont_name:focus{
+.text-msg:focus, .date-select:focus, #cont_name:focus {
     outline: none;
 }
 
-.submit-btn{
+.submit-btn {
     width: 15%;
     padding: 6px 0;
     text-align: center;
 }
 
-.form-modal{
+.form-modal {
     width: 33.3%;
     position: fixed;
     left: 33%;
@@ -57,13 +57,13 @@ body{
     box-shadow: 4px 5px 15px #bbbbbb;
 }
 
-.form-modal label{
+.form-modal label {
     font-weight: bold;
     padding-bottom: 5px;
     display: block;
 }
 
-.form-modal input, .form-modal textarea{
+.form-modal input, .form-modal textarea {
     border: none;
     background-color: transparent;
     display: table-cell;
@@ -72,16 +72,16 @@ body{
     font-size: 16px;
 }
 
-.selected-message{
+.selected-message {
     margin-bottom: 20px;
 }
 
-.form-modal form{
+.form-modal form {
     display: table;
     width: 100%;
 }
 
-.modal-cover{
+.modal-cover {
     width: 100vw;
     height: 100vh;
     position: fixed;
@@ -90,9 +90,13 @@ body{
     opacity: 0.5;
 }
 
-.modal-submit-btn{
+.modal-submit-btn {
     width: 30%;
     padding: 6px 0;
+}
+
+.field-error {
+    border: 2px solid red;
 }
 
 
@@ -102,7 +106,7 @@ body{
         border: red 1px solid;
     }
 
-    .form-modal{
+    .form-modal {
         width: 90%;
         left: 5%;
     }
