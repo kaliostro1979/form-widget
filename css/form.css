@@ -1,3 +1,95 @@
-#cont_name{
-    width: 150px;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+.form-block {
+    width: 100%;
+}
+
+.name-date-row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#cont_name, .date-select {
+    width: 49%;
+    margin-bottom: 20px;
+    height: 40px;
+    text-indent: 20px;
+}
+
+.text-msg {
+    width: 100%;
+    margin-bottom: 20px;
+    min-width: 100%;
+    max-width: 100%;
+}
+
+.text-msg:focus, .date-select:focus, #cont_name:focus{
+    outline: none;
+}
+
+.submit-btn{
+    width: 15%;
+    padding: 6px 0;
+    text-align: center;
+}
+
+.form-modal{
+    width: 33.3%;
+    position: fixed;
+    left: 33%;
+    top: 33%;
+    z-index: 1;
+    border: 1px solid red;
+    padding: 15px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 4px 5px 15px #bbbbbb;
+}
+
+.form-modal input, .form-modal textarea{
+    border: none;
+    background-color: transparent;
+}
+
+.form-modal form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.modal-cover{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    background-color: #cccccc;
+    opacity: 0.5;
+}
+
+.modal-submit-btn{
+    width: 30%;
+    padding: 6px 0;
+}
+
+
+@media only screen and (max-width: 600px) {
+    #cont_name, .date-select {
+        width: 100%;
+        border: red 1px solid;
+    }
+
+    .form-modal{
+        width: 90%;
+        left: 5%;
+    }
+
+    .modal-submit-btn {
+        width: 50%;
+    }
 }
